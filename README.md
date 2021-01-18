@@ -1,4 +1,4 @@
-# Snake-game-using-tensorFlow
+# Snake-game-using-neural-network
 Uses an evolutionary approach to teach an AI how to play the classic game of Snake 
 ## Example
 ![Example Snake](https://github.com/FrankWan27/SnakeAI/blob/master/img/examplesnake.gif?raw=true)
