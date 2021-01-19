@@ -3,7 +3,6 @@ Uses an evolutionary approach to teach an AI how to play the classic game of Sna
 ## Example
 ![Example Snake](https://github.com/FrankWan27/SnakeAI/blob/master/img/examplesnake.gif?raw=true)
 
-[Click Here](#training-example) for more example videos
 ## Table of Contents
 - [Overview](#overview)
 - [Installation](#installation)
@@ -29,7 +28,6 @@ Following a standard set of snake rules:
 
 The program window is divided into three sections. The top left section shows the current game window, which includes the current game world, snake, and fruit information. The top right section shows the current snake's neural network. The bottom section shows a graph which contains the highest and average score history of all the previous generations.
 
-![Overview](https://github.com/FrankWan27/SnakeAI/blob/master/img/overview.png?raw=true)
 
 ---
 
@@ -59,20 +57,6 @@ To start running the snake AI, simply run main.py in the parent directory
 
 ---
 
-## Controls
-The game can be played by the AI (AI Mode) or by a human (Human Mode). By default, the game starts in AI mode. Upon closing the game by clicking the X button, the best performing snake's neural network will be written to the file "BestOnClose.txt"
-
-### AI Mode
-
-- Up/Down Arrow Key - Increase/Decrease the snake's movement speed (FPS) by 5 (Max 60, Min 5, Default 60)
-- Space - Immediately kill the current snake and assign a fitness score of -1 (won't reproduce)
-- W - Write best performing snake's neural network to the file "BestOnManual.txt"
-- G - Switch to Human Mode
-
-### Human Mode
-
-- Up/Down/Left/Right Arrow Key - Change snake's direction to be up/down/left/right
-- G - Switch to AI Mode
 
 ### Adjustable Parameters
 
@@ -93,7 +77,6 @@ This neural network is 24x20x12x4, with one input layer, two hidden layers, and 
 
 The neural network visualizer draws colors each neuron between black (no activation) and white (high activation). The weights are colored between red (inhibiting connection) and green (positive connection).
 
-![Neural Net](https://github.com/FrankWan27/SnakeAI/blob/master/img/nnet.png?raw=true)
 
 ### Inputs
 The snake can see in 8 directions, starting from the left, and every 45 degrees rotated clockwise. For each vision direction, it can calculate the distance from the wall, its tail, and the fruit. 
@@ -135,26 +118,9 @@ To ensure our population will continue to evolve, we will randomly mutate all 40
 
 ## Training Example 
 
-![training](https://github.com/FrankWan27/SnakeAI/blob/master/img/training.gif?raw=true)
 
 ### Sped up snake at late stage of training
 
 ![spedup](https://j.gifs.com/3Qx8NM.gif)
-[Higher Quality Video](https://gfycat.com/memorablequickazurewingedmagpie)
 
 ---
-
-## Afterthoughts
-
-After finishing the project, I thought of a few improvements I could have made:
-- Randomize the starting location of the snake
-	- Because my grid size is 20x20, there is no center tile. Thus, the snakes are biased to move in the direction that has the most tiles before hitting the wall. (In our case, up and left).
-	- We could randomize the starting location of each snake to be any of the four center tiles which would remove this bias.
-- Have a color gene
-	- I think it would be cool to see which parents each child snake has. An easy way to identify the parents of each child is to have a color gene that is also passed down through crossover.
-- Have all snakes in the population run simultaneously 
-	- One of the biggest limitations of this project is that I couldn't increase the population size to a large number such as 1000+, since each snake runs one at a time. If all snakes ran at the same time, we could greatly speed up the learning process and increase the population size.
-- Save the random seed for each snake
-	- If we save the random seed used to generate the food spawn locations, we could reproduce the exact path a specific snake took. This way, we can replay the lives of high scoring snakes.
-
-Also, this project was originally intended to be a Tetris AI, but I got side tracked and made a Snake AI first.(I will continue the tetris project at a later date - stay tuned!
