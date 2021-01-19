@@ -30,9 +30,6 @@ The program window is divided into three sections. The top left section shows th
 
 ## Installation
 
-### Clone
-
-- Clone this repo to your local machine using `git clone https://github.com/FrankWan27/SnakeAI.git`
 
 ### Dependencies
 
