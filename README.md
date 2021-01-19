@@ -6,12 +6,9 @@ Uses an evolutionary approach to teach an AI how to play the classic game of Sna
 ## Table of Contents
 - [Overview](#overview)
 - [Installation](#installation)
-- [Controls](#controls)
 - [Neural Network Structure](#neural-network-structure)
 - [Genetic Algorithm](#genetic-algorithm)
 - [Training Example](#training-example)
-- [Afterthoughts](#afterthoughts)
-- [Authors](#authors)
 
 ---
 
